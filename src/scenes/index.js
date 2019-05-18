@@ -1,9 +1,14 @@
 import ListItemsPage from "./item";
 
 import React, { PureComponent } from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { createStore, applyMiddleware, compose } from "redux";
-import { createBrowserHistory } from "history";
+import {
+  ConnectedRouter,
+  routerReducer,
+  routerMiddleware
+} from "react-router-redux";
+import createHistory from "history/createBrowserHistory";
 
 import { createEpicMiddleware } from "redux-observable";
 import { combineEpics } from "redux-observable";
@@ -18,27 +23,31 @@ const rootEpic = combineEpics(getListItemsEpic);
 
 export const rootReducer = combineReducers({
   [STATE_NAME.ITEM_LIST]: listItemReducer,
-  loadingReducer
+  loadingReducer,
+  router: routerReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const epicMiddleware = createEpicMiddleware(rootEpic);
-const history = createBrowserHistory();
+const history = createHistory();
+const routerMiddlewareRedux = routerMiddleware(history);
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(epicMiddleware))
+  composeEnhancers(applyMiddleware(epicMiddleware, routerMiddlewareRedux))
 );
 
 class App extends PureComponent {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter history={history}>
-          <Switch>
-            <Route exact path="/" component={ListItemsPage} />
-          </Switch>
-        </BrowserRouter>
+        <ConnectedRouter history={history}>
+          <div>
+            <Switch>
+              <Route exact path="/" component={ListItemsPage} />
+            </Switch>
+          </div>
+        </ConnectedRouter>
       </Provider>
     );
   }
