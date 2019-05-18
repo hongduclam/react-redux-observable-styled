@@ -42,11 +42,9 @@ class App extends PureComponent {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <div>
-            <Switch>
-              <Route exact path="/" component={ListItemsPage} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="" component={ListItemsPage} />
+          </Switch>
         </ConnectedRouter>
       </Provider>
     );
