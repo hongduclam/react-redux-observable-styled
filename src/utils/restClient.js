@@ -12,10 +12,11 @@ const restClient = {
           rp => {
             return rp;
           },
-          ({ response }) => {
+          (err) => {
+            console.log(err);
             return {
-              status: response.status,
-              message: response.statusText
+              status: 500,
+              message: err
             };
           }
         )

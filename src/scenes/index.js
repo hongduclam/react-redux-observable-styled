@@ -8,7 +8,7 @@ import {
   routerReducer,
   routerMiddleware
 } from "react-router-redux";
-import createHistory from "history/createBrowserHistory";
+import createHistory from 'history/createHashHistory';
 
 import { createEpicMiddleware } from "redux-observable";
 import { combineEpics } from "redux-observable";
@@ -42,11 +42,9 @@ class App extends PureComponent {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <div>
             <Switch>
               <Route exact path="/" component={ListItemsPage} />
             </Switch>
-          </div>
         </ConnectedRouter>
       </Provider>
     );

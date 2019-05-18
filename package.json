@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "axios": "^0.18.0",
+    "eslint": "^5.16.0",
     "history": "^4.7.2",
     "lodash": "^4.17.10",
     "react": "^16.4.0",
@@ -31,5 +32,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

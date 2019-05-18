@@ -3,7 +3,7 @@ import { GET_LIST_ITEMS } from "./item.types";
 export const listItems = {
   start: payload => {
     return {
-      type: GET_LIST_ITEMS,
+      type: GET_LIST_ITEMS.START,
       payload
     };
   },

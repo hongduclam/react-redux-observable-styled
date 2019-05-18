@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ItemImage } from "./ItemImage";
-import { BackDropContext } from "..";
 import { ItemInfo } from "./ItemInfo";
 import { FlexDiv, Saperator } from "../../../components/styled";
 import { UserInfo } from "./UserInfo";
@@ -11,6 +10,7 @@ import {
   IconLike,
   IconAttach
 } from "../../../components/icons";
+import { BackDropContext } from "../ListItemPage";
 
 const ItemWrapper = styled.div`
   flex-basis: calc(25% - 1em);
