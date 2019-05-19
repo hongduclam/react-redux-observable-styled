@@ -1,5 +1,6 @@
-# ReactJS Sample App
+# ReactJS Redux Sample App
 * ReactJS version 16.x.x
+* Redux
 * Responsive design by [https://www.styled-components.com](https://www.styled-components.com)
 * Pulling data from [https://api.giphy.com/v1/gifs/trending](https://api.giphy.com/v1/gifs/trending)
 * Loading more 20 items by scrolling to end of page
