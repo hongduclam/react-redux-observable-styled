@@ -1,4 +1,4 @@
-import ListItemsPage from "./item";
+import TrendingItemPage from "./trending-item";
 
 import React, { PureComponent } from "react";
 import { Route, Switch } from "react-router-dom";
@@ -43,7 +43,7 @@ class App extends PureComponent {
       <Provider store={store}>
         <ConnectedRouter history={history}>
             <Switch>
-              <Route exact path="/" component={ListItemsPage} />
+              <Route exact path="/" component={TrendingItemPage} />
             </Switch>
         </ConnectedRouter>
       </Provider>

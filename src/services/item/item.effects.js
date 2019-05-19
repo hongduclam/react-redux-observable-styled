@@ -6,6 +6,7 @@ import { getListItems } from "../api";
 export const getListItemsEpic = (action$, ...rest) => {
   return action$
     .ofType(GET_LIST_ITEMS.START)
+    .delay(300)
     .switchMap(action => {
       return getListItems(action.payload).map(response => {
         if (response.status === 500) {

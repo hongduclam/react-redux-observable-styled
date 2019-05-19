@@ -13,7 +13,7 @@ const FlexDiv = styled.div`
 `;
 
 const BackDropWrapper = styled.div`
-  opacity: ${props => (props.show ? 0.85 : 0)};
+  opacity: 0.85;
   position: fixed;
   left: 0;
   top: 0;
@@ -21,6 +21,8 @@ const BackDropWrapper = styled.div`
   height: 100%;
   background: #000;
   z-index: ${props => (props.show ? 100 : 0)};
+  transition: all .25s ease-out;
+  display: ${props => (props.show ? 'block' : 'none')};
 `;
-
+BackDropWrapper.displayName = "BackDropWrapper";
 export { Saperator, FlexDiv, BackDropWrapper };
