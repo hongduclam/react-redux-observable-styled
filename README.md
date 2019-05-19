@@ -30,7 +30,14 @@ yarn start or npm start
 * [https://lam-reactjs-sample.herokuapp.com](https://lam-reactjs-sample.herokuapp.com)
 
 ## Resources
-[Folder structure](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1)
++ [Folder structure](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1)
++ https://hackernoon.com/10-react-mini-patterns-c1da92f068c5
++ (10 expert ReactJS tips that you need to know today)(https://www.creativebloq.com/news/5-expert-reactjs-tips-that-you-need-to-know-today)
++ A compilation of React Patterns, techniques, tips and tricks.
++ https://github.com/vasanthk/react-bits
++ https://www.toptal.com/react/tips-and-practices
++ https://medium.com/@michaljurkowski/10-tips-how-to-make-reactjs-code-like-a-pro-998978206765
++ https://blog.risingstack.com/8-tips-to-build-better-react-apps-in-2018/#
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
