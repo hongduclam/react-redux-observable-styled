@@ -1,5 +1,5 @@
-# ReactJS Redux Sample App
-* ReactJS version 16.x.x
+# React Redux Sample App
+* React version 16.4.8
 * Redux
 * Responsive design by [https://www.styled-components.com](https://www.styled-components.com)
 * Pulling data from [https://api.giphy.com/v1/gifs/trending](https://api.giphy.com/v1/gifs/trending)
@@ -38,6 +38,9 @@ yarn start or npm start
 + https://www.toptal.com/react/tips-and-practices
 + https://medium.com/@michaljurkowski/10-tips-how-to-make-reactjs-code-like-a-pro-998978206765
 + https://blog.risingstack.com/8-tips-to-build-better-react-apps-in-2018/#
++ https://medium.com/inturn-eng/naming-styled-components-d7097950a245
++ [React Hooks](https://reactjs.org/docs/hooks-intro.html)
++ [React Styled Components Tutorial](https://www.robinwieruch.de/react-styled-components/)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

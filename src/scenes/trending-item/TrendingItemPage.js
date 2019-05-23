@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Item } from "./components/Item";
-import { BackDropWrapper } from "../../components/styled";
+import { BackDrop } from "../../components/styled";
 import { createStructuredSelector } from "reselect";
 import BlockUi from "react-block-ui";
 import "react-block-ui/style.css";
@@ -16,19 +16,20 @@ export const TrendingItemPageWrapper = styled.div`
 	background-color: #f1f1f1 !important;
 	margin: 0 auto;
 `;
-TrendingItemPageWrapper.displayName = "TrendingItemPageWrapper"
+TrendingItemPageWrapper.displayName = "TrendingItemPageWrapper";
 
-export const GridRowWrapper = styled.div`
+export const ListItemsWrapper = styled.div`
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	box-sizing: border-box;
 `;
-GridRowWrapper.displayName = "GridRowWrapper"
 
-export const BackDropContext = React.createContext({
+ListItemsWrapper.displayName = "ListItemsWrapper";
+
+export const ThemeContext = React.createContext({
 	showBackDrop: false,
-	handleToggleBackDrop: () => true
+	handleToggleBackDrop: React.noop
 });
 
 const buildItemInfo = (itemRawInfo = {}) => {
@@ -87,7 +88,7 @@ export class TrendingItemPage extends React.PureComponent {
 		const { showBackDrop } = this.state;
 		const { isFetching, listItems } = this.props;
 		return (
-			<BackDropContext.Provider
+			<ThemeContext.Provider
 				value={{
 					showBackDrop: showBackDrop,
 					handleToggleBackDrop: this.handleToggleBackDrop
@@ -96,16 +97,16 @@ export class TrendingItemPage extends React.PureComponent {
 				<ErrorBoundary>
 					<BlockUi tag="div" blocking={isFetching}>
 						<TrendingItemPageWrapper>
-							<BackDropWrapper show={showBackDrop} />
-							<GridRowWrapper>
+							<BackDrop show={showBackDrop} />
+							<ListItemsWrapper>
 								{listItems.map((item, index) => (
 									<Item {...buildItemInfo(item)} key={`item-key-${item.id}-${index}`} />
 								))}
-							</GridRowWrapper>
+							</ListItemsWrapper>
 						</TrendingItemPageWrapper>
 					</BlockUi>
 				</ErrorBoundary>
-			</BackDropContext.Provider>
+			</ThemeContext.Provider>
 		);
 	}
 }
@@ -140,5 +141,5 @@ TrendingItemPage.propTypes = {
 	isFetching: PropTypes.bool,
 	listItems: PropTypes.array,
 	error: PropTypes.string,
-	getListItems: PropTypes.func,
+	getListItems: PropTypes.func
 };
