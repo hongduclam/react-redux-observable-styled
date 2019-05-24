@@ -16,6 +16,7 @@ export const TrendingItemPageWrapper = styled.div`
 	background-color: #f1f1f1 !important;
 	margin: 0 auto;
 `;
+
 TrendingItemPageWrapper.displayName = "TrendingItemPageWrapper";
 
 export const ListItemsWrapper = styled.div`

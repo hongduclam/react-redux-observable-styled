@@ -1,6 +1,6 @@
 import { shallow } from "enzyme";
 import React from "react";
-import { TrendingItemPage, BackDropContext, TrendingItemPageWrapper } from "../../TrendingItemPage";
+import { TrendingItemPage } from "../../TrendingItemPage";
 
 describe("<TrendingItemPage />", () => {
 	global.window = {
@@ -39,7 +39,7 @@ describe("<TrendingItemPage />", () => {
 		const wrapper = getComponent();
 		expect(wrapper.find("BlockUi")).toHaveLength(1);
 		expect(wrapper.find("TrendingItemPageWrapper")).toHaveLength(1);
-		expect(wrapper.find("GridRowWrapper")).toHaveLength(1);
+		expect(wrapper.find("ListItemsWrapper")).toHaveLength(1);
 		expect(wrapper.find("BackDropWrapper")).toHaveLength(1);
 		expect(wrapper.find("ErrorBoundary")).toHaveLength(1);
 		expect(wrapper.find("Item")).toHaveLength(0);

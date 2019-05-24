@@ -3,7 +3,8 @@ import { FlexDiv, Saperator } from "../../../components/styled";
 import styled from "styled-components";
 
 const S = {
-	UserInfo: styled.div`
+	UserInfo: styled(FlexDiv)`
+	  align-items: center;
 		background-color: #f1f1f1 !important;
 		padding: 0.1em;
 		img {
@@ -21,11 +22,9 @@ const S = {
 export const UserInfo = ({ avatarUrl, name }) => {
 	return (
 		<S.UserInfo>
-			<FlexDiv alignItems="center">
 				<img src={avatarUrl} alt={avatarUrl} />
 				<Saperator />
 				<p>{name}</p>
-			</FlexDiv>
 		</S.UserInfo>
 	);
 };

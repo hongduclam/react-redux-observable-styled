@@ -3,7 +3,8 @@ import { FlexDiv } from "../../../components/styled";
 import styled from "styled-components";
 
 const S = {
-	CountInfo: styled.div`
+	CountInfo: styled(FlexDiv)`
+		align-items: center;
 		p {
 			margin-left: 0.2em;
 		}
@@ -14,9 +15,7 @@ const S = {
 export const ItemTotalInfo = ({ icon, value }) => {
 	return (
 		<S.CountInfo>
-			<FlexDiv alignItems="center">
-				{icon} <p>{value}</p>
-			</FlexDiv>
+			{icon} <p>{value}</p>
 		</S.CountInfo>
 	);
 };
