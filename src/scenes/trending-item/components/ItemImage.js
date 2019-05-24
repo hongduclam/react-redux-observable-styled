@@ -61,7 +61,8 @@ S.ItemImageLoader = styled.div`
 
 export const ItemImage = ({ url, alt }) => {
 	// TODO: we can use useReducer instead by useState if it is complex state
-	const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  /* eslint-disable */
 	const [isLoaded, setIsLoaded] = useState(true);
 	const { handleToggleBackDrop } = useContext(ThemeContext);
 
@@ -74,9 +75,9 @@ export const ItemImage = ({ url, alt }) => {
 		setIsFullscreen(!isFullscreen);
   };
   // TODO: handle lazy load image
-	const handleLoading = () => {
-		setIsLoaded(true);
-	};
+	// const handleLoading = () => {
+	// 	setIsLoaded(true);
+	// };
 
 	return (
 		<div style={{ height: 200 }}>
