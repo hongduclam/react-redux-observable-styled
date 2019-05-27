@@ -1,4 +1,4 @@
-# React Redux, Redux Observable
+# React, Redux, Redux Observable, Styled Componet
 * React version 16.4.8
 * Redux
 * Responsive design by [https://www.styled-components.com](https://www.styled-components.com)
