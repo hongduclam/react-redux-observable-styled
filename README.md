@@ -1,4 +1,4 @@
-# React Redux Sample App
+# React Redux, Redux Observable
 * React version 16.4.8
 * Redux
 * Responsive design by [https://www.styled-components.com](https://www.styled-components.com)
